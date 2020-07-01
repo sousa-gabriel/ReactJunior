@@ -5,8 +5,13 @@ import {createDrawerNavigator, DrawerContentScrollView, DrawerItemList} from '@r
 import { SafeAreaProvider, SafeAreaView } from 'react-native-safe-area-context';
 
 //importando telas 
+// import HomeLogin from '../Screens/Login/HomeLogin';
+// import Login from '../Screens/Login/Login';
+// import Senha from '../Screens/Login/Senha';
+import Perfil from '../Screens/Perfil/Perfil';
 import Cadastrar from '../Screens/Cadastrar/cadastrar';
 import Home from '../Screens/Home/Home';
+
 
 //Renderizando a lista na navegação lateral
 function CustomDrawerContent(props) {
@@ -24,6 +29,10 @@ const Drawer = createDrawerNavigator();
 function MyDrawer() {
   return (
     <Drawer.Navigator drawerContent={props => <CustomDrawerContent {...props} />}>
+        {/* <Drawer.Screen name="HomeLogin" component={HomeLogin}/> */}
+        {/* <Drawer.Screen name="Login" component={Login}/> */}
+        {/* <Drawer.Screen name="Senha" component={Senha}/> */}
+        <Drawer.Screen name="Perfil" component={Perfil}/>
         <Drawer.Screen name="Home" component={Home}/>
         <Drawer.Screen name="Cadastrar" component={Cadastrar} />
     </Drawer.Navigator>
